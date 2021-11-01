@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Таблица</title>
+        <meta name="descriprion" content="Это таблица">
+        <meta name="keywords" content="Лёха, Горбунов, Алексей, M33041, таблица, зебра">
+        <link rel="stylesheet" href="../Lab1/assets/css/menubar.css">
+        <link rel="stylesheet" href="../Lab2/assets/content2_style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="assets\scripts\script.js"></script>
+    </head>
+
+<body onload="start(document.forms[0])" onunload="cleartids()">
+    <div class="header">
+        <div class="logo">
+            <div class="logo_text">
+                <h1><a href="#">Я Лёха</a></h1>
+                <h2><sup>12 менеджеров на одного разработчика == чистый профит</sup></h2>
+            </div>
+        </div>
+
+        <nav class="menubar">
+            <ul class="menu">
+                <li id="li1"><a href="../index.html">Это я</a></li>
+                <li id="li2"><a href="#">Таблица</a></li>
+                <li id="li"><a href="#">Тут потом</a></li>
+                <li id="li"><a href="#">Здесь тоже пусто</a></li>
+                <li id="li"><a href="#">Совсем пусто жесть</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <div id="object">Что я делал</div>
+            <div class="nechet" id="object">Во время завтрака</div><div id="object">Во время обеда</div><div class="nechet" id="object">Во время ужина</div><div id="object">В свободное время</div><div class="nechet" id="object">В туалет сходить</div>
+            <div id="object">Понедельник</div>
+            <div class="nechet">Завтракал</div><div>Обедал</div><div class="nechet">Ужинал</div><div>Прогал</div><div class="nechet">хе хе туалет</div>
+            <div id="object">Вторник</div>
+            <div class="nechet">Завтракал</div><div>Обедал</div><div class="nechet">Ужинал</div><div>Прогал</div><div class="nechet">хе хе туалет</div>
+            <div id="object">Среда</div>
+            <div class="nechet">Завтракал</div><div>Обедал</div><div class="nechet">Я иногда готовлю тирамису со своими братьями-хиппи, которые только начинают познавать,<br>
+                 что вие, и вот тут РАЗ и всё, сразу экстаз, вкусовые ощущения на высоте, рай на земле, я мечтал о тирамису</div><div>Прогтакое 
+                     удовольстал</div><div class="nechet">хе хе туалет</div>
+            <div id="object">Четверг</div>
+            <div class="nechet">Завтракал</div><div>Обедал</div><div class="nechet">Ужинал</div><div>Прогал</div><div class="nechet">хе хе туалет</div>
+            <div id="object">Пятница</div>
+            <div class="nechet">Завтракал</div><div>Обедал</div><div class="nechet">Ужинал</div><div>Прогал</div><div class="nechet">хе хе туалет</div>
+          </div>
+    </div>
+
+    <div class="footer">
+        <hr>
+        <div class="footer_text">
+            <p>&copy M33041 Горбунов Алексей, все права не защищены</p>
+            <p>telegram: @TiredSpaceStranger</p>
+            <p>Дата публикации: <time pubdate datetime="2001-09-11"></time>11 сентября</p>
+        </div>
+    </div>
+    <!--
+    <script type="text/javascript">
+        console.log("Hello world!")
+    </script> -->
+    <script type="text/javascript">
+        (function() {
+            console.log("Hello world!")
+            var now = new Date();
+            startS = new Date(performance.timing.requestStart).getSeconds();
+            startMS = new Date(performance.timing.requestStart).getMilliseconds();
+            endS = now.getSeconds();
+            endMS = now.getMilliseconds();
+            res = Math.abs(endS*1000 + endMS - startS*1000 - startMS);
+            console.log(endS, endMS, startS, startMS)
+            var stats = document.createElement("p");
+            stats.textContent = "Page load time is " + res + " ms";
+            document.getElementsByClassName("footer_text")[0].appendChild(stats);
+        })();
+        </script>
+        <script src="assets\scripts\menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>лаба</title>
+    <meta name="descriprion" content="Это про меня страница смотрите">
+    <meta name="keywords" content="Алексей, Горбунов, Алексей, M33041, код, успехи, олень, поставьте, сто, баллов">
+    <link rel="stylesheet" href="Lab1/assets/css/menubar.css">
+    <link rel="stylesheet" href="Lab1/assets/css/mainstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="Lab2\assets\scripts\script.js"></script>
+</head>
+
+<body onload="start(document.forms[0])" onunload="cleartids()">
+
+    <div class="header">
+        <div class="logo">
+            <div class="logo_text">
+                <h1><a href="#">Я Алексей</a></h1>
+                <h2><sup>12 менеджеров на одного разработчика == чистый профит</sup></h2>
+            </div>
+        </div>
+
+        <nav class="menubar">
+            <ul class="menu">
+                <li id="li1"><a href="index.html">Это я</a></li>
+                <li id="li2"><a href="Lab2/content2.html">Таблица</a></li>
+                <li id="li3"><a href="#">Тут потом</a></li>
+                <li id="li4"><a href="#">Здесь тоже пусто</a></li>
+                <li id="li5"><a href="#">Совсем пусто жесть</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="wrapper">
+
+        <aside>
+            Это пространство я<br>
+            когда-нибудь реализую
+        </aside>
+
+
+        <div class="main">
+
+            <div class="success_header">
+                <h2>Успехи</h2>
+            </div>
+
+            <div class="success">
+                <h3>
+                    <ul>
+                        <li>
+                            <p>Младший разработчик в команде клиента iOS яндекс еды</p>
+                        </li>
+                        <li>
+                            <p>Покрасил 2 кнопки, а к одной даже action добавил</p>
+                        </li>
+                    </ul>
+                </h3>
+            </div>
+
+
+            <div class="code_header">
+                <h2>Код за который не стыдно</h2>
+            </div>
+            <div class="code">
+                <pre class="swift" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #B833A1;">class</span> AccessGetter<span style="color: black;">&lt;</span>Value<span style="color: black;">&gt;</span> <span style="color: black;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #B833A1;">private</span> <span style="color: #B833A1;">let</span> 🚽 = <span style="color: #6F41A7;">NSLock</span><span style="color: black;">&#40;</span><span style="color: black;">&#41;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #B833A1;">private</span> <span style="color: #B833A1;">var</span> value<span style="color: black;">:</span> Value</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #B833A1;">init</span><span style="color: black;">&#40;</span>_ value<span style="color: black;">:</span> Value<span style="color: black;">&#41;</span> <span style="color: black;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">        <span style="color: #B833A1;">self</span>.<span style="color: #508187;">value</span> = value</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: black;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #B833A1;">func</span> addAction<span style="color: black;">&#40;</span>_ action<span style="color: black;">:</span> <span style="color: black;">&#40;</span>Value<span style="color: black;">&#41;</span> <span style="color: black;">-&gt;</span> <span style="color: #6F41A7;">Void</span><span style="color: black;">&#41;</span> <span style="color: black;">&#123;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">        defer <span style="color: black;">&#123;</span> 🚽.🔐<span style="color: black;">&#40;</span><span style="color: black;">&#41;</span> <span style="color: black;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">        🚽.🔒<span style="color: black;">&#40;</span><span style="color: black;">&#41;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">        action<span style="color: black;">&#40;</span>value<span style="color: black;">&#41;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: black;">&#125;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: black;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #B833A1;">private</span> <span style="color: #B833A1;">extension</span> <span style="color: #6F41A7;">NSLock</span> <span style="color: black;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #B833A1;">func</span> 🔐<span style="color: black;">&#40;</span><span style="color: black;">&#41;</span> <span style="color: black;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">        unlock<span style="color: black;">&#40;</span><span style="color: black;">&#41;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: black;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #B833A1;">func</span> 🔒<span style="color: black;">&#40;</span><span style="color: black;">&#41;</span> <span style="color: black;">&#123;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">        lock<span style="color: black;">&#40;</span><span style="color: black;">&#41;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: black;">&#125;</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: black;">&#125;</span></div></li></ol>
+            </pre>
+            </div>
+
+            <div class="animal_header">
+                <h2>Мое тотемное животное</h2><br>
+            </div>
+            <div class="animal">
+                <pre>                 _____________________
+                / HTML -- лучший      \
+                \ инструмент на свете /
+                 ---------------------
+                       \   ^__^
+                        \  (oo)\_______
+                           (__)\       )\/\
+                               ||----w |
+                               ||     ||
+                </pre>
+            </div>
+            
+            <div class="icu">
+                <a href="1x.bet"><img src="Lab1\assets\imgs\M--svXdOXqc.jpg"></src></a>
+                <p>выше картинка с тенью</p>
+            </div>
+
+        </div>
+
+        <aside>
+            <div class="verticale-wrapper">
+                <div class="element"><a href="1x.bet"><img src="Lab1/assets/imgs/Screenshot_1.jpg"></src></a></div>
+                <div class="element"><a href="1x.bet"><img src="Lab1/assets/imgs/Screenshot_2.jpg"></src></a></div>
+                <div class="element"><a href="1x.bet"><img src="Lab1/assets/imgs/Screenshot_3.jpg"></src></a></div>
+                <div class="element"><a href="1x.bet"><img src="Lab1/assets/imgs/Screenshot_4.jpg"></src></a></div>
+            </div>
+        </aside>
+    </div>
+
+    <div class="footer">
+        <hr>
+        <div class="footer_text">
+            <p>&copy M33041 Горбунов Алексей, все права не защищены</p>
+            <p>telegram: @TiredSpaceStranger</p>
+            <p>Дата публикации: <time pubdate datetime="2001-09-11"></time>11 сентября</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        (function() {
+            console.log("Hello world!")
+            var now = new Date();
+            startS = new Date(performance.timing.requestStart).getSeconds();
+            startMS = new Date(performance.timing.requestStart).getMilliseconds();
+            endS = now.getSeconds();
+            endMS = now.getMilliseconds();
+            res = Math.abs(endS*1000 + endMS - startS*1000 - startMS);
+            console.log(endS, endMS, startS, startMS)
+            var stats = document.createElement("p");
+            stats.textContent = "Page load time is " + res + " ms";
+            document.getElementsByClassName("footer_text")[0].appendChild(stats);
+        })();
+    </script>
+    <script src="Lab2\assets\scripts\menu.js"></script>
+</body>
+
+</html>
