@@ -1,0 +1,30 @@
+.main {
+    display: grid; 
+    padding: 2px; 
+    background-color: pink;
+}
+
+table {
+    text-align: center;
+}
+
+table td:first-child, tr:first-child {
+    background-color: #2F4F4F;
+}
+
+thead :last-child {
+    width: 10%;
+}
+
+/* Нечетные строки */
+table tbody tr:nth-child(odd){
+	background: #fff;
+}
+ 
+/* Четные строки */
+table tbody tr:nth-child(even){
+	background: #F7F7F7;
+}
+
+table tr { line-height: 40px; }
+
