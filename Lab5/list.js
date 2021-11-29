@@ -21,7 +21,7 @@ function createDeleteElements(value) {
     li.textContent = value;
 
     btn.className = "btn";
-    btn.textContent = "Delite";
+    btn.textContent = "Delete";
     li.appendChild(btn);
 
     btn.addEventListener("click", (e) => {

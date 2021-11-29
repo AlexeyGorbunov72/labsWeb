@@ -1,34 +1,28 @@
-var timestr = "00:00:00";
-var title = document.title;
-var tid = 0;
-var pause = 0;
-var to;
-var bcount;
-var tcount;
+let timestr = "00:00:00";
+let title = document.title;
+let tid = 0;
+let pause = 0;
+let to;
+let bcount;
+let tcount;
 
 function time(n) {
 	tid = window.setTimeout("time(1)", to);
 	today = new Date()
-
 	if(today.getMinutes() < 10) pad = "0"
-	else pad = "";
-
+		else pad = "";
 	if(today.getSeconds() < 10) pads = "0"
-	else pads = "";
-
+		else pads = "";
 	timestr = today.getHours() + ":" + pad + today.getMinutes() + ":" + pads + today.getSeconds();
 	document.title = title + ' ' + timestr;
-
 	window.clearTimeout(tid);
 	tid = window.setTimeout("time()", to);
 }
-
 function start(x) {
 	f = x;
 	to = 60;
 	time(x);
 }
-
 function cleartids() {
 	window.clearTimeout(tid);
 }

@@ -22,18 +22,9 @@ ul {
     margin-bottom: 50px;
 }
 
-.btn {
-    background: red;
-    border: none;
-    color: #fff;
-    margin-left: 15px;
-    padding: 10px;
-    cursor: pointer;
-    position: relative;
-    z-index: 10;
-}
 
 .li {
+    word-break: break-all;
     padding: 4px 8px;
     background: #eddfff;
     border: 1px solid brown;
@@ -45,6 +36,18 @@ ul {
     z-index: 5;
     width: 100%;
     text-transform: capitalize;
+}
+
+.btn {
+    word-break: keep-all;
+    background: red;
+    border: none;
+    color: #fff;
+    margin-left: 15px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
 }
 
 .li-dead, .li-dead .btn {
