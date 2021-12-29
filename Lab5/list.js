@@ -35,15 +35,12 @@ form.addEventListener('submit', (e) => {
 function createElement(value) {
     totalCount++;
 
-    const del = document.createElement("button");
-    const li = document.createElement("li");
+    const temp = document.querySelector('#item_template')
+    const tempLi = temp.content.querySelector("li");
 
-    li.className = "li";
-    li.textContent = value;
-
-    del.className = "btn";
-    del.textContent = "Delete";
-    li.appendChild(del);
+    const li = document.importNode(tempLi, true);
+    const del = li.querySelector(".btn");
+    li.querySelector('.text').textContent = value;
 
     del.addEventListener("click", (e) => {
         result.removeChild(li);
@@ -52,10 +49,6 @@ function createElement(value) {
         const localItems = getItemsFromLocalStorage();
         const newItems = localItems.filter((item) => item !== li.textContent.substring(0, li.textContent.length - 6));
         localStorage.setItem('items', JSON.stringify(newItems));
-    })
-
-    li.addEventListener("click", () => {
-        li.classList.toggle("li-dead");
     })
 
     total.textContent = String(totalCount);

@@ -1,8 +1,10 @@
-const activePage = document.URL.split('/').at(-1).split('.')[0];
+const activePage = window.location.href
+const buttons = document.querySelectorAll('nav a')
 
-window.onload = function() {
-    const element = document.getElementsByName(activePage);
-    if (element.length !== 0) {
-        document.getElementsByName(activePage)[0].style.color = "Gold";
-    }
-}
+window.addEventListener('DOMContentLoaded', () => {
+    buttons.forEach(element => {
+        if (activePage.includes(element.href)) {
+            element.style.color = "Gold";
+        }
+    });
+});

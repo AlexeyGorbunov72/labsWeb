@@ -118,6 +118,16 @@
         <p>Дата публикации: <time datetime="2001-09-11"></time>11 сентября</p>
     </footer>
 
+    <template id="comment_template">
+        <div class="comment">
+            <div class="comment__author">
+                <div class="comment__name">${com['name']}</div>
+                <div class="comment__email">${com['email']}</div>
+            </div>
+            <div class="comment__content">${com['body']}</div>
+        </div>
+    </template>
+
     <script src="./Lab2/assets/scripts/menu.js"></script>
 </body>
 <script type="text/javascript" src="./Lab7/slidr.min.js"></script>

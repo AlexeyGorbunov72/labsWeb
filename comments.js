@@ -24,18 +24,17 @@ window.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
+        const temp = document.querySelector('#comment_template');
+        const divComment = temp.content.querySelector('div');
         comments.forEach(com => {
-            const newCom = document.createElement('div');
-            newCom.classList.add('comment');
-            newCom.innerHTML =
-                `<div class="comment__author">
-                <div class="comment__name">${com['name']}</div>
-                <div class="comment__email">${com['email']}</div>
-            </div>
-            <div class="comment__content">${com['body']}</div>`;
+            const newCom = document.importNode(divComment, true);
+            newCom.querySelector('.comment__name').textContent = com['name'];
+            newCom.querySelector('.comment__email').textContent = com['email'];
+            newCom.querySelector('.comment__content').textContent = com['body'];
             commentsBlock.appendChild(newCom);
         });
     } catch (e) {
+        console.log(e)
         document.querySelector('.spinner-wrapper').style.display = 'none';
         const newErr = document.createElement('div');
         newErr.classList.add('error');
