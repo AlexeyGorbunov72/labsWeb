@@ -1,0 +1,74 @@
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 0;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#input {
+    padding: 0 10px;
+    width: 80%;
+    height: 30px;
+    border-radius: 0;
+    border: solid 1px #606060;
+}
+
+#btn {
+    width: 20%;
+    height: 32px;
+    border-radius: 0;
+    border: solid 1px #606060;
+    border-left: none;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    background: red;
+    border: none;
+    color: #fff;
+    margin-left: 15px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.li {
+    padding: 10px;
+    background: #eddfff;
+    border: 1px solid brown;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    text-transform: capitalize;
+}
+
+.li-dead, .li-dead .btn {
+    color: #555;
+    text-decoration: line-through;
+    background: #000;
+}
+
+#total {
+    margin: 10px 0;
+}
+
+footer {
+    bottom: 0;
+}

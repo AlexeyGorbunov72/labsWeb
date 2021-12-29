@@ -22,21 +22,22 @@
         <ul class="menu">
             <li id="li1"><a type="menuPoint" name="index" href="../index.html">Это я</a></li>
             <li id="li2"><a type="menuPoint" name="content2" href="../Lab2/content2.html">Таблица</a></li>
-            <li id="li"><a type="menuPoint" name="interactiveList" href="#">Пятая лаба</a></li>
-            <li id="li"><a type="menuPoint" name="4menu" href="#">Здесь тоже пусто</a></li>
-            <li id="li"><a type="menuPoint" name="5menu" href="#">Совсем пусто жесть</a></li>
+            <li id="li3"><a type="menuPoint" name="interactiveList" href="#">Пятая лаба</a></li>
+            <li id="li4"><a type="menuPoint" name="4menu" href="#">Здесь тоже пусто</a></li>
+            <li id="li5"><a type="menuPoint" name="5menu" href="#">Совсем пусто жесть</a></li>
         </ul>
     </header>
 
-    <div class="main">
-        <input type="text" id="input" />
-        <button id="btn">Add</button>
+    <main>
+        <form>
+            <label for="input"></label><input type="text" id="input" placeholder="New post"/>
+            <button id="btn" disabled>Add</button>
+        </form>
         <ul id="result"></ul>
-        <div>
-            Total: 
-            <span id="total"></span>
+        <div id="total">
+            Total: <span class="total-count">0</span>
         </div>
-    </div> 
+    </main>
 
     <footer>
         <p>&copy M33041 Горбунов Алексей, все права не защищены</p>

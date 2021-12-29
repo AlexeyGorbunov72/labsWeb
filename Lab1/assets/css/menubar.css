@@ -61,6 +61,15 @@ ul.menu li a {
     text-decoration: none;
 }
 
+ul.menu li a:hover {
+    color: yellow;
+}
+
+ul.menu li a:active {
+    color: #a1a10f;
+    transition: linear 0.1s;
+}
+
 /* ===============================footer is here =============================*/
 
 footer {

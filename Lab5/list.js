@@ -1,39 +1,63 @@
 const input = document.querySelector("#input");
+const form = document.querySelector('form')
 const btn = document.querySelector("#btn");
 const result = document.querySelector("#result");
-const total = document.querySelector("#total");
-let i = 0;
+const total = document.querySelector(".total-count");
+let totalCount = 0;
 
-btn.addEventListener('click', (e) => {
+(function () {
+    const items = getItemsFromLocalStorage();
+    items.forEach(str => createElement(str))
+})();
+
+function getItemsFromLocalStorage() {
+    if(localStorage.getItem('items')) {
+        return JSON.parse(localStorage.getItem('items'));
+    }
+    return [];
+}
+
+input.addEventListener('input', () => {
+    btn.disabled = input.value === '';
+});
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
     if (input.value === "") return;
-    createDeleteElements(input.value);
+    createElement(input.value);
+    const newItems = getItemsFromLocalStorage();
+    newItems.push(input.value);
+    input.value = '';
+    localStorage.setItem('items', JSON.stringify(newItems))
     input.value = "";
 })
 
-function createDeleteElements(value) {
-    i++;
-    console.log(value)
+function createElement(value) {
+    totalCount++;
 
-    const btn = document.createElement("button");
+    const del = document.createElement("button");
     const li = document.createElement("li");
 
     li.className = "li";
     li.textContent = value;
 
-    btn.className = "btn";
-    btn.textContent = "Delite";
-    li.appendChild(btn);
+    del.className = "btn";
+    del.textContent = "Delete";
+    li.appendChild(del);
 
-    btn.addEventListener("click", (e) => {
+    del.addEventListener("click", (e) => {
         result.removeChild(li);
-        i--;
-        total.textContent = i;
+        totalCount--;
+        total.innerText = totalCount;
+        const localItems = getItemsFromLocalStorage();
+        const newItems = localItems.filter((item) => item !== li.textContent.substring(0, li.textContent.length - 6));
+        localStorage.setItem('items', JSON.stringify(newItems));
     })
 
-    li.addEventListener("click", (e) => {
+    li.addEventListener("click", () => {
         li.classList.toggle("li-dead");
     })
 
-    total.textContent = i;
+    total.textContent = String(totalCount);
     result.appendChild(li)
 }

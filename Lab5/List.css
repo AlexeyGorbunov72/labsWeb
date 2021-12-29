@@ -1,25 +1,39 @@
-.main {
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding: 50px 0;
-    margin: auto;
-    width: 300px;
+    margin: 0 auto;
+    max-width: 400px;
 }
 
 #input {
-    width: 70%;
+    padding: 0 10px;
+    width: 80%;
+    height: 30px;
+    border-radius: 0;
+    border: solid 1px #606060;
 }
 
 #btn {
     width: 20%;
+    height: 32px;
+    border-radius: 0;
+    border: solid 1px #606060;
+    border-left: none;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-#result {
-    margin-bottom: 50px;
 }
 
 .btn {
@@ -34,16 +48,14 @@ ul {
 }
 
 .li {
-    padding: 4px 8px;
+    padding: 10px;
     background: #eddfff;
     border: 1px solid brown;
     margin: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     z-index: 5;
-    width: 100%;
     text-transform: capitalize;
 }
 
@@ -51,4 +63,12 @@ ul {
     color: #555;
     text-decoration: line-through;
     background: #000;
+}
+
+#total {
+    margin: 10px 0;
+}
+
+footer {
+    bottom: 0;
 }

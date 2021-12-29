@@ -1,4 +1,4 @@
-.main {
+main {
     display: grid; 
     padding: 2px; 
     background-color: pink;
@@ -28,3 +28,12 @@ table tbody tr:nth-child(even){
 
 table tr { line-height: 40px; }
 
+footer {
+    bottom: 0;
+}
+
+@media (max-width: 300px) {
+    main {
+        overflow: scroll;
+    }
+}
